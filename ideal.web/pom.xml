@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.ideal</groupId>
+    <artifactId>ideal.client</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>ideal.web</artifactId>
+  <packaging>war</packaging>
+
+  
+  <dependencies>
+  	<dependency>
+  		<groupId>com.ideal</groupId>
+  		<artifactId>ideal.user</artifactId>
+  		<version>${project.version}</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>com.ideal</groupId>
+  		<artifactId>ideal.openApi</artifactId>
+  		<version>${project.version}</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>com.ideal</groupId>
+  		<artifactId>ideal.permission</artifactId>
+  		<version>${project.version}</version>
+  	</dependency>
+  </dependencies>
+  <profiles>
+  	<profile>
+  		<id>dev_us</id>
+  		<dependencies>
+  			<dependency>
+  				<groupId>com.ideal</groupId>
+  				<artifactId>ideal.us</artifactId>
+  				<version>${project.version}</version>
+  			</dependency>
+  		</dependencies>
+  	</profile>
+  	<profile>
+  		<id>dev_zh</id>
+  		<dependencies>
+  			<dependency>
+  				<groupId>com.ideal</groupId>
+  				<artifactId>ideal.zh</artifactId>
+  				<version>${project.version}</version>
+  			</dependency>
+  		</dependencies>
+  	</profile>
+  </profiles>
+</project>

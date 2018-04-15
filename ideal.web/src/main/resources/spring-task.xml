@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:task="http://www.springframework.org/schema/task"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-4.3.xsd">
+	
+	<bean	id="methodInvokingJobDetailFactoryBean"	class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject"	ref="taskManager"></property>
+		<property name="targetMethod"	value="execute"></property>
+		<property name="concurrent"	value="false"></property>
+	</bean>
+	
+	<bean	id="cronTriggerFactoryBean"	class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+		<property name="jobDetail"	ref="methodInvokingJobDetailFactoryBean"></property>
+		<property name="cronExpression"	value="0 */1 * * * ?"></property>
+	</bean>
+	
+	<bean id="schedulerFactoryBean"	class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="triggers">
+			<array>
+				<ref	bean="cronTriggerFactoryBean"/>
+			</array>
+		</property>
+	</bean>
+</beans>

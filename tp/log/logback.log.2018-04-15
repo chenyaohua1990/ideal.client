@@ -1,0 +1,2 @@
+2018-04-15 00:02:25.834 [localhost-startStop-1] DEBUG org.apache.cxf.common.logging.LogUtils:  Using org.apache.cxf.common.logging.Slf4jLogger for logging.
+2018-04-15 00:02:25.858 [localhost-startStop-1] DEBUG o.a.c.c.spring.AbstractBeanDefinitionParser:  Adding org.apache.cxf.configuration.spring.AbstractBeanDefinitionParser.wireBus attribute CONSTRUCTOR to bean org.springframework.beans.factory.support.BeanDefinitionBuilder@40132d68

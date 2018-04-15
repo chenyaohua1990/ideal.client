@@ -1,0 +1,29 @@
+2018-04-14 22:50:54.560 [localhost-startStop-1] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper:  Context refreshed
+2018-04-14 22:50:54.600 [localhost-startStop-1] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper:  Found 1 custom documentation plugin(s)
+2018-04-14 22:50:54.626 [localhost-startStop-1] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner:  Scanning for api listing references
+2018-04-14 22:50:56.045 [localhost-startStop-1] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper:  Context refreshed
+2018-04-14 22:50:56.046 [localhost-startStop-1] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper:  Found 1 custom documentation plugin(s)
+2018-04-14 22:50:56.053 [localhost-startStop-1] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner:  Scanning for api listing references
+2018-04-14 22:50:56.074 [localhost-startStop-1] DEBUG s.d.s.w.readers.operation.OperationModelsProvider:  Adding return parameter of type Ljava/lang/String;
+2018-04-14 22:50:56.075 [localhost-startStop-1] DEBUG s.d.s.w.readers.operation.OperationModelsProvider:  Reading parameters models for handlerMethod |login|
+2018-04-14 22:50:56.077 [localhost-startStop-1] DEBUG s.d.s.w.readers.operation.OperationModelsProvider:  Finished reading parameters models for handlerMethod |login|
+2018-04-14 22:50:56.079 [localhost-startStop-1] DEBUG s.d.s.r.operation.SwaggerOperationModelsProvider:  Adding return parameter of type Ljava/lang/String;
+2018-04-14 22:50:56.080 [localhost-startStop-1] DEBUG s.d.s.r.operation.SwaggerOperationModelsProvider:  Reading parameters models for handlerMethod |login|
+2018-04-14 22:50:56.090 [localhost-startStop-1] DEBUG s.documentation.schema.DefaultModelProvider:  Skipping model of type Ljava/lang/String; as its either a container type, map, enum or base type, or its already been handled
+2018-04-14 22:50:56.091 [localhost-startStop-1] DEBUG s.documentation.spring.web.scanners.ApiModelReader:  Did not find any parameter models for java.lang.String
+2018-04-14 22:50:56.091 [localhost-startStop-1] DEBUG s.d.schema.DefaultModelDependencyProvider:  Marking base type Ljava/lang/String; as seen
+2018-04-14 22:50:56.111 [localhost-startStop-1] DEBUG s.d.s.w.r.operation.OperationResponseClassReader:  Setting spring response class to:string
+2018-04-14 22:50:56.115 [localhost-startStop-1] DEBUG s.d.swagger.readers.operation.OperationAuthReader:  Authorization count 0 for method login
+2018-04-14 22:50:56.141 [localhost-startStop-1] DEBUG s.d.s.r.o.SwaggerOperationResponseClassReader:  Setting response class to:string
+2018-04-14 22:50:56.149 [localhost-startStop-1] DEBUG s.d.s.readers.operation.VendorExtensionsReader:  Extension count 1 for method login
+2018-04-14 22:50:56.165 [localhost-startStop-1] DEBUG s.d.s.w.readers.operation.OperationModelsProvider:  Adding return parameter of type Ljava/lang/String;
+2018-04-14 22:50:56.166 [localhost-startStop-1] DEBUG s.d.s.w.readers.operation.OperationModelsProvider:  Reading parameters models for handlerMethod |login|
+2018-04-14 22:50:56.166 [localhost-startStop-1] DEBUG s.d.s.w.readers.operation.OperationModelsProvider:  Finished reading parameters models for handlerMethod |login|
+2018-04-14 22:50:56.167 [localhost-startStop-1] DEBUG s.d.s.r.operation.SwaggerOperationModelsProvider:  Adding return parameter of type Ljava/lang/String;
+2018-04-14 22:50:56.167 [localhost-startStop-1] DEBUG s.d.s.r.operation.SwaggerOperationModelsProvider:  Reading parameters models for handlerMethod |login|
+2018-04-14 22:50:56.167 [localhost-startStop-1] DEBUG s.documentation.spring.web.scanners.ApiModelReader:  Did not find any parameter models for java.lang.String
+2018-04-14 22:50:56.169 [localhost-startStop-1] DEBUG s.d.s.w.r.operation.OperationResponseClassReader:  Setting spring response class to:string
+2018-04-14 22:50:56.170 [localhost-startStop-1] DEBUG s.d.swagger.readers.operation.OperationAuthReader:  Authorization count 0 for method login
+2018-04-14 22:50:56.170 [localhost-startStop-1] DEBUG s.d.s.r.o.SwaggerOperationResponseClassReader:  Setting response class to:string
+2018-04-14 22:50:56.171 [localhost-startStop-1] DEBUG s.d.s.readers.operation.VendorExtensionsReader:  Extension count 1 for method login
+2018-04-14 22:50:56.171 [localhost-startStop-1] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator:  Generating unique operation named: loginUsingGET_1

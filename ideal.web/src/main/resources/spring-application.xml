@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+	
+	<context:component-scan base-package="com.ideal">
+		<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+	</context:component-scan>
+	<beans	profile="dev_us"	>
+		<context:property-placeholder	location="classpath:ideal_dev_us.properties"/>
+		
+	</beans>
+	
+	<beans	profile="dev_zh"	>
+		<context:property-placeholder	location="classpath:ideal_dev_zh.properties"/>
+	</beans>
+	<beans	profile="dev_zh,dev_us">
+		 <import resource="classpath:META-INF/cxf/cxf.xml" />  
+	    <import resource="classpath:META-INF/cxf/cxf-servlet.xml" /> 
+		<!-- <import resource="classpath:spring-task.xml"/> -->
+		<import resource="classpath:spring-email.xml"/>
+		<import resource="classpath:spring-hession-client.xml"/>
+ 		<import resource="classpath:spring-ws-service.xml"/>
+		<import resource="classpath:spring-rs-service.xml"/>
+		
+<!-- 		<bean id="swaggerResource" class="io.swagger.jaxrs.listing.ApiListingResource" />
+		<bean id="swaggerWriter" class="io.swagger.jaxrs.listing.SwaggerSerializers" />
+		<bean id="beanConfig" class="io.swagger.jaxrs.config.BeanConfig">
+	        <property name="resourcePackage" value="cn.zno.resource" />
+	        <property name="version" value="1.0.0" />
+	        <property name="host" value="localhost:8080/ideal" />
+	        <property name="title" value="Swagger Petstore" />
+	        <property name="description" value="This is a app." />
+	        <property name="contact" value="apiteam@swagger.io" />
+	        <property name="license" value="Apache 2.0" />
+	        <property name="licenseUrl" value="http://www.apache.org/licenses/LICENSE-2.0.html" />
+	        <property name="scan" value="true" />
+	    </bean> -->
+	    
+		<bean	id="freeMarkerConfigurer" class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
+			<property name="defaultEncoding"	value="utf-8"></property>
+			<property name="templateLoaderPath"	value="classpath:template/"></property>
+		 	<property name="freemarkerVariables"	>
+		 		<map>
+		 			<entry	key="xml_escape"	>
+		 				<bean id="xmlEscape"	class="freemarker.template.utility.XmlEscape"/>
+		 			</entry>
+		 		</map>
+		 	</property>
+		</bean>
+		
+	</beans>
+</beans>
