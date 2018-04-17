@@ -7,7 +7,7 @@
 	
 	<bean	id="iUser"	class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
 		<property name="serviceInterface"	value="com.ideal.mdb.serviceI.IUser"></property>
-		<property name="serviceUrl" value="${hession.url}/iuser/login"></property>
+		<property name="serviceUrl" value="${hession.url}/login"></property>
 	</bean>
 	
 </beans>

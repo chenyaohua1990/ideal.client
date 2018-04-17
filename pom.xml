@@ -241,7 +241,7 @@
 			</activation>
 			<properties>
 				<spring.env>dev_us</spring.env>
-				<hession.remoting>http://localhost:8081</hession.remoting>
+				<hession.remoting>http://localhost:8081/mdb</hession.remoting>
 			</properties>
 			<build>
 				<plugins>
